@@ -1,0 +1,11 @@
+# Exclude the project virtual environment from image builds
+.venv
+.gitignore
+docker*
+**/__pycache__
+**/*.pyc
+app.egg-info
+.mypy_cache
+.coverage
+htmlcov
+.cache
