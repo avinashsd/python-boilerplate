@@ -22,7 +22,7 @@ Steps:
 
 Development Commands:
     - Run Ruff checks
-        uv run ruff check
+        uv run ruff check --fix
         uv run ruff format
     - Run pytest
         uv run pytest
