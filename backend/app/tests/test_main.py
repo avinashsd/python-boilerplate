@@ -1,16 +1,20 @@
+from collections.abc import Generator
+from typing import Any
+
 import pytest
+from flask.testing import FlaskClient
 
 from app.main import app as application
 
 
 @pytest.fixture
-def client():
+def client() -> Generator[FlaskClient, Any, Any]:
     application.config["TESTING"] = True
-    with application.test_client() as client:
-        yield client
+    with application.test_client() as c:
+        yield c
 
 
-def test_index(client):
+def test_index(client: FlaskClient) -> None:
     response = client.get("/")
     assert response.status_code == 200
     assert response.data == b"Hola!!"

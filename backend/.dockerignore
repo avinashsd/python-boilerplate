@@ -8,4 +8,4 @@ app.egg-info
 .mypy_cache
 .coverage
 htmlcov
-.cache
+.*cache
