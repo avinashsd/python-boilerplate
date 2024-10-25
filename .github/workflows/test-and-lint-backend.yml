@@ -58,5 +58,5 @@ jobs:
       - run: |
           uv run python -B -m mypy app
           uv run python -B -m ruff check
-          uv run python -B -m format --check
+          uv run python -B -m ruff format --check
         working-directory: backend
