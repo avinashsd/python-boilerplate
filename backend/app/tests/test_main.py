@@ -24,3 +24,4 @@ def test_index(client: FlaskClient) -> None:
 def test_add() -> None:
     assert add(1, 2) == 3
     assert add(1, 4) != 2
+    assert add(1, 6) == 2
