@@ -6,3 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def home() -> str:
     return "Hola!!"
+
+
+def add(a, b):
+    return a + b
